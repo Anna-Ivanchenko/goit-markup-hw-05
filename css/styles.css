@@ -646,12 +646,52 @@ footer .container {
     fill: #fff;
 }
 
+.modal-label-container {
+    width: 360px;
+    height: 336px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    
+}
+
 .modal-title {
     font-weight: 500;
+    font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     text-align: center;
     color: #2e2f42;
+    margin-bottom: 16px;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+.modal-form-label {
+    font-weight: 400;    
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+    margin-bottom: 4px;
+}
+
+.modal-input-container {
+    display: flex;
+}
+
+.modal-form-input {
+    width: 360px;
+    height: 40px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    margin-bottom: 8px;
 }
 
 input.modal-input-container .modal-icon {
@@ -659,5 +699,13 @@ input.modal-input-container .modal-icon {
     top: 0;
     left: 0;
 }
+
+.modal-comment-container{
+    display: flex;
+    flex-direction: column;
+}
 /* #endregion modal */
 
+ ;
+
+     
