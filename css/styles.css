@@ -34,27 +34,32 @@ img {
 
 input {
     font-family: inherit;
-    font-size: 18px;
+    font-size: 12px;
     padding: 8px 16px;
+    border: 1px solid #4d5ae5;
+    border-radius: 4px;
 }
 
-/* input::placeholder {
+
+input::placeholder {
     font-weight: 400;
     font-size: 12px;
     color: #2E2F42;
-} */
-/* input:hover::placeholder,
-input:focus::placeholder {
-    color: #4d5ae5;
-} */
+}
 
-/* form:focus-within {
+input:placeholder-shown {
+    border-color: rgba(46, 47, 66, 0.4);
+}
+
+input:active::placeholder {
     border-color: #4d5ae5;
-} */
+}
+
 
 button {
     font-family: inherit;
     color: currentColor;
+    cursor: pointer;
 }
 
 .container {
@@ -592,15 +597,15 @@ footer .container {
     justify-content: center;
     align-items: center;
 
-    /* opacity: 0;
+    opacity: 0;
     pointer-events: none;
-    transition: opacity 250ms ease-in-out; */
+    transition: opacity 250ms ease-in-out;
 }
 
-/* .modal-overlay.is-open {
+.modal-overlay.is-open {
     opacity: 1;
     pointer-events: auto;
-} */
+}
 
 .modal {
     background-color: #fcfcfc;
@@ -648,8 +653,7 @@ footer .container {
 }
 
 .modal-label-container {
-    width: 360px;
-    height: 336px;
+    
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -685,47 +689,57 @@ footer .container {
 
 .modal-input-container {
     display: flex;
+    position: relative;
+    
 }
 
 .modal-form-input {
     width: 360px;
     height: 40px;
-    border: 1px solid rgba(46, 47, 66, 0.4);
+    /* border: 1px solid rgba(46, 47, 66, 0.4); */
     border-radius: 4px;
     margin-bottom: 8px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 
 .modal-text-input {
     font-weight: 400;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
-    color: rgba(46, 47, 66, 0.4);
+    
     padding: 8px 16px;
     resize: none;
-    border: 1px solid rgba(46, 47, 66, 0.4);
+    /* border: 1px solid rgba(46, 47, 66, 0.4); */
     border-radius: 4px;
     width: 360px;
     height: 120px;
     margin-bottom: 16px;
 }
 
-input.modal-input-container .modal-icon {
+.modal-icon-form {
+    fill: #2E2F42;
     position: absolute;
-    top: 0;
-    left: 0;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+input.modal-form-input:active .modal-icon-form {
+    fill: #4d5ae5;
+
+}
+
 
 .modal-comment-container{
     display: flex;
     flex-direction: column;
 }
 
-.modal-terms {
-    
-}
-
-.modal-terms-checkbox{
+.modal-terms-checkbox {
     border-radius: 2px;
     border: 1px solid rgba(46, 47, 66, 0.4);
     width: 16px;
@@ -734,18 +748,32 @@ input.modal-input-container .modal-icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 8px;
+    margin-right: 8px;    
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.modal-terms-checkbox:active {
+    background-color: #404BBF;
+}
+
+
+.modal-icon{
+    fill: #f4f4fd;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);    
+}
+
+
 
 .modal-terms-text {
     display: flex;
-
+    text-align: center;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
     color: #8e8f99;
+    margin-bottom: 24px;
 }
 
 .privacy-policy {
@@ -753,6 +781,35 @@ input.modal-input-container .modal-icon {
     text-decoration: underline;
     text-decoration-skip-ink: none;
     color: #4d5ae5;
+    
+}
+
+.modal-submit-button {
+    display: block;
+    border: none;
+    border-radius: 4px;
+    padding: 16px 32px;
+    width: 169px;
+    height: 56px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    background: #4d5ae5;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-submit-button:hover,
+.modal-submit-button:focus {
+    color: #e1e0e4;
+    background-color: #404BBF;
 }
 /* #endregion modal */
 
