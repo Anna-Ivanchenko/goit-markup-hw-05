@@ -35,6 +35,7 @@ img {
 input {
     font-family: inherit;
     font-size: 18px;
+    padding: 8px 16px;
 }
 
 /* input::placeholder {
@@ -694,6 +695,21 @@ footer .container {
     margin-bottom: 8px;
 }
 
+.modal-text-input {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
+    padding: 8px 16px;
+    resize: none;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    width: 360px;
+    height: 120px;
+    margin-bottom: 16px;
+}
+
 input.modal-input-container .modal-icon {
     position: absolute;
     top: 0;
@@ -704,8 +720,42 @@ input.modal-input-container .modal-icon {
     display: flex;
     flex-direction: column;
 }
+
+.modal-terms {
+    
+}
+
+.modal-terms-checkbox{
+    border-radius: 2px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    width: 16px;
+    height: 16px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+}
+
+.modal-terms-text {
+    display: flex;
+
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+}
+
+.privacy-policy {
+    line-height: 1.3;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #4d5ae5;
+}
 /* #endregion modal */
 
- ;
+
 
      
