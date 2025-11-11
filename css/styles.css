@@ -799,10 +799,9 @@ footer .container {
     fill: #4d5ae5;
 }
 
-
-
-  
-
+.modal-comment-container {
+    margin-bottom: 16px;
+}
 
 .modal-text-input {
     width: 100%;
