@@ -795,7 +795,11 @@ footer .container {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-form-input:focus .modal-icon-form {
+.modal-icon-form {
+    fill: #2e2f42;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form-input:focus+svg {
     fill: #4d5ae5;
 }
 
@@ -857,6 +861,12 @@ footer .container {
 .modal-icon{
     fill: #f4f4fd;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);    
+}
+
+input:checked+label>span {
+    background-color:#404bbf;
+    border: none;
+    fill: #F4F4FD;
 }
 
 
