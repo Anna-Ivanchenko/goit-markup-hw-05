@@ -872,7 +872,7 @@ input:checked+label>span {
 
 
 .modal-terms-text {
-    display: flex;
+    
     text-align: center;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
